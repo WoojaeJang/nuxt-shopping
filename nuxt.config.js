@@ -49,6 +49,13 @@ export default {
 
   devServer: {
     hot: true
+  },
+
+  // evn config
+  env: {
+    baseURL: process.env.NODE_ENV === 'production'
+      ? 'https://my-json-server.typicode.com/WoojaeJang/nuxt-shopping-api'
+      : 'http://localhost:3000',
   }
 
 }
