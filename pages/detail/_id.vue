@@ -27,9 +27,19 @@ export default {
         // const id = console.log(params.id);
         const response = await fetchProductById(params.id);
         const product = response.data
-        return { product }
-        
+        return { product }        
     },
+
+  head: {
+    title: 'Shopping Item Detail',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: '이 상품은 ~~입니다.',
+      },
+    ],
+  },
 
     methods: {
       async addToCart() {
